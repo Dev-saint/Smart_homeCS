@@ -8,7 +8,7 @@ namespace Smart_homeCS
 {
     class Wine_vault
     {
-        private Parametrs param_wine;
+        private Parametrs param_wine = new Parametrs();
 
         //Конструктор
         public Wine_vault()

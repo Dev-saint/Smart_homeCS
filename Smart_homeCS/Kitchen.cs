@@ -10,7 +10,7 @@ namespace Smart_homeCS
     class Kitchen
     {
         private int coffee; //Приготовление кофе после сна
-        private Parametrs param_kitch;
+        private Parametrs param_kitch = new Parametrs();
 
         //Конструктор
         public Kitchen()

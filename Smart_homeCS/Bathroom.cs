@@ -10,7 +10,7 @@ namespace Smart_homeCS
     class Bathroom
     {
         private int flag_water; //Флаг набора воды
-        private Parametrs param_bath;
+        private Parametrs param_bath = new Parametrs();
 
         //Конструктор
         public Bathroom()

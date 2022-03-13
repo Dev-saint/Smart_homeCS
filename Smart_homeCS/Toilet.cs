@@ -8,7 +8,7 @@ namespace Smart_homeCS
 {
     public class Toilet
     {
-        private Parametrs param_toil; //Параметры туалета
+        private Parametrs param_toil = new Parametrs(); //Параметры туалета
 
         //Конструктор
         public Toilet()

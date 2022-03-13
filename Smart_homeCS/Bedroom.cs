@@ -8,7 +8,7 @@ namespace Smart_homeCS
 {
     class Bedroom
     {
-        private Parametrs param_bed;
+        private Parametrs param_bed = new Parametrs();
 
         //Конструктор
         public Bedroom()
