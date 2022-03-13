@@ -88,7 +88,7 @@ namespace Smart_homeCS
                                 Console.WriteLine("\nСвет уже включен. Выключить свет? Да(1)/Нет(0)");
                                 tmp = Console.ReadLine();
                                 light = Convert.ToInt32(tmp);
-                                if (light == 0)
+                                if (light == 1)
                                 {
                                     toil.Set_light_toil(light);
                                     Console.WriteLine("Свет в туалете выключен");
@@ -188,7 +188,7 @@ namespace Smart_homeCS
                                 Console.WriteLine("Свет уже включен. Выключить свет? Да(1)/Нет(0)");
                                 tmp = Console.ReadLine();
                                 light = Convert.ToInt32(tmp);
-                                if (light == 0)
+                                if (light == 1)
                                 {
                                     kitch.Set_light_kitch(light);
                                     Console.WriteLine("Свет на кухне выключен");
@@ -297,7 +297,7 @@ namespace Smart_homeCS
                                 Console.WriteLine("Свет уже включен. Выключить свет? Да(1)/Нет(0)");
                                 tmp = Console.ReadLine();
                                 light = Convert.ToInt32(tmp);
-                                if (light == 0)
+                                if (light == 1)
                                 {
                                     bed.Set_light_bed(light);
                                     Console.WriteLine("Свет в спальне выключен");
@@ -397,7 +397,7 @@ namespace Smart_homeCS
                                 Console.WriteLine("Свет уже включен. Выключить свет? Да(1)/Нет(0)");
                                 tmp = Console.ReadLine();
                                 light = Convert.ToInt32(tmp);
-                                if (light == 0)
+                                if (light == 1)
                                 {
                                     bath.Set_light_bath(light);
                                     Console.WriteLine("Свет в ванной выключен");
@@ -506,7 +506,7 @@ namespace Smart_homeCS
                                 Console.WriteLine("Свет уже включен. Выключить свет? Да(1)/Нет(0)");
                                 tmp = Console.ReadLine();
                                 light = Convert.ToInt32(tmp);
-                                if (light == 0)
+                                if (light == 1)
                                 {
                                     wine.Set_light_wine(light);
                                     Console.WriteLine("Свет в ванной выключен");
