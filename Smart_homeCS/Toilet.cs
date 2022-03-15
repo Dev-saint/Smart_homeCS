@@ -110,5 +110,18 @@ namespace Smart_homeCS
                 + "6. Скорость вентиляции\n"
                 + "Выбранный пункт: ");
         }
+
+        // Проверка возврата значения по ref
+        public void TestRef4(ref int Value)
+        {
+            Value = 4;
+        }
+
+        // Проверка возврата значения по out
+        public void TestOut5(out int Value)
+        {
+            Value = 5;
+        }
+
     }
 }

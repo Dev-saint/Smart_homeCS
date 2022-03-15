@@ -134,5 +134,15 @@ namespace Smart_homeCS
 			this.light = l;
 			this.vent_speed = speed;
 		}
+
+		public void Display()
+		{
+			Console.WriteLine("\nТемература воздуха: " + air_temp + " °С");
+			Console.WriteLine("Влажность воздуха: " + air_hum + " %");
+			Console.WriteLine("Концентрация CO2: " + conc_co2 + " %");
+			Console.WriteLine("Яркость света: " + brightness + " %");
+			Console.WriteLine("Флажок света: " + light);
+			Console.WriteLine("Скорость вентиляции: " + vent_speed + " %");
+		}
 	}
 }

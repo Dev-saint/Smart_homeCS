@@ -589,6 +589,23 @@ namespace Smart_homeCS
                     mas_toil[j].Set_parametrs_toil(20 - j*2, 45 + j, 5*j, 100/(j+2), 1, 49/(j+1));
                     mas_toil[j].DisplayToil();
                 }
+
+                Console.Write("\n\n14) Продемонстрировать возврат значения через параметр out и через\nпараметр ref. Показать различие этих механизмов\n");
+                Console.Write("==================================================================\n");
+                Console.Write("На примере класса Toilet\n");
+
+                // Инициализация переменной для передачи по ref
+                int ArgRef = 2;
+                // Описание переменной для передачи по out
+                int ArgOut;
+
+                // Передача аргумента по ref
+                mas_toil[0].TestRef4(ref ArgRef);
+                Console.WriteLine("Аргумент функции после использования по ref: " + ArgRef);
+
+                // Передача аргумента по out
+                mas_toil[1].TestOut5(out ArgOut);
+                Console.WriteLine("Аргумент функции после использования по out: " + ArgOut);
             } while (f_menu_rooms == 1);
         }
     }
