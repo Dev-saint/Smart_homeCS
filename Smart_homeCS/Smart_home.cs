@@ -633,6 +633,39 @@ namespace Smart_homeCS
                 // Печать в обратном порядке значений элементов списка:
                 param[3].reprint();
 
+                Console.Write("\n\n16) Продемонстрировать перегрузку операторов '+', '++'\n");
+                Console.Write("==================================================================\n");
+                Console.Write("На примере класса Параметры\n");
+
+                Console.Write("Температура 1 и температура 2:\n");
+                param[0].Set_air_temp(1);
+                param[1].Set_air_temp(2);
+                Console.WriteLine("Температура: " + param[0].Get_air_temp());
+                Console.WriteLine("Температура: " + param[1].Get_air_temp());
+                Console.Write("Сумма температур через оператор \'+\':\n");
+                param[0] = param[0] + param[1];
+                param[1] = param[0];
+                Console.WriteLine("Температура: " + param[0].Get_air_temp());
+                Console.Write("Прибавление к сумме 1 через постфиксный оператор \'++\': ");
+                Console.WriteLine((param[0]++).Get_air_temp());
+                Console.Write("Прибавление к сумме 1 через префиксный оператор \'++\': ");
+                Console.WriteLine((++param[1]).Get_air_temp());
+
+                Console.Write("\n\n17) Продемонстрировать обработку строк (string)\n");
+                Console.Write("==================================================================\n");
+                Console.WriteLine("На примере строк Troitskiy и Prog, сравнение строк и сложение\n");
+
+                string Troitskiy, Prog;
+                Troitskiy = "Извините, ";
+                Prog = "что так поздно сдаю лабы:(";
+
+                if (Troitskiy.Equals(Prog))
+                    Console.WriteLine("\nСтроки равны!");
+                else
+                {
+                    Troitskiy = Troitskiy + Prog;
+                    Console.WriteLine(Troitskiy + "\n");
+                }
             } while (f_menu_rooms == 1);
         }
     }

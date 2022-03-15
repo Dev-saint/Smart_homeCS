@@ -98,6 +98,7 @@ namespace Smart_homeCS
 			set => vent_speed = value;
 		}
 
+		//Конструктор
 		public Parametrs()
 		{
 			air_temp = 0;
@@ -106,6 +107,17 @@ namespace Smart_homeCS
 			brightness = 0;
 			light = 0;
 			vent_speed = 0;
+		}
+
+		//Конструктор с параметрами
+		public Parametrs(double temp, double hum, double co2, int bright, int l, int vent_speed)
+		{
+			this.air_temp = temp;
+			this.air_hum = hum;
+			this.conc_co2 = co2;
+			this.brightness = bright;
+			this.light = l;
+			this.vent_speed = vent_speed;
 		}
 
 		//Функции получения данных из полей
@@ -190,5 +202,12 @@ namespace Smart_homeCS
 			Console.WriteLine("Флажок света: " + light);
 			Console.WriteLine("Скорость вентиляции: " + vent_speed + " %");
 		}
+
+		public static Parametrs operator +(Parametrs operand1, Parametrs operand2)
+			=> new Parametrs(operand1.air_temp + operand2.air_temp, 0, 0, 0, 0, 0);
+
+		public static Parametrs operator ++(Parametrs operand1)
+			=> new Parametrs(operand1.air_temp + 1, 0, 0, 0, 0, 0);
+
 	}
 }
