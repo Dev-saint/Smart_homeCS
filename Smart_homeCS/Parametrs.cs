@@ -15,6 +15,43 @@ namespace Smart_homeCS
 		private int light; //Включение/выключение света
 		private int vent_speed; //Скорость вентиляции
 
+		public double Air_temp
+        {
+			get => air_temp;
+			set => air_temp = value;
+
+		}
+
+		public double Air_hum
+        {
+			get => air_hum;
+			set => air_hum = value;
+		}
+
+		public double Conc_co2
+        {
+			get => conc_co2;
+			set => conc_co2 = value;
+		}
+
+		public int Brightness
+        {
+			get => brightness;
+			set => brightness = value;
+		}
+
+		public int Light
+        {
+			get => light;
+			set => light = value;
+		}
+
+		public int Vent_speed
+        {
+			get => vent_speed;
+			set => vent_speed = value;
+		}
+
 		public Parametrs()
 		{
 			air_temp = 0;

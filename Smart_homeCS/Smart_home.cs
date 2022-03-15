@@ -554,6 +554,24 @@ namespace Smart_homeCS
                 Console.WriteLine("Желаете выбрать другую комнату? Да(1)/Нет(0)");
                 tmp = Console.ReadLine();
                 f_menu_rooms = Convert.ToInt32(tmp);
+
+                Console.Write("\n\n10) Для полей добавить свойства и продемонстрировать работу с ними\n");
+                Console.Write("==================================================================\n");
+                Console.Write("На примере класса Туалет\n");
+
+                Parametrs par_10 = new Parametrs();
+                par_10.Air_temp = 20;
+                par_10.Air_hum = 50;
+                par_10.Conc_co2 = 10;
+                par_10.Brightness = 63;
+                par_10.Light = 1;
+                par_10.Vent_speed = 15;
+                Console.WriteLine("Температура: " + par_10.Air_temp);
+                Console.WriteLine("Влажность: " + par_10.Air_hum);
+                Console.WriteLine("Концентрация CO2: " + par_10.Conc_co2);
+                Console.WriteLine("Яркость: " + par_10.Brightness);
+                Console.WriteLine("Флаг света: " + par_10.Light);
+                Console.WriteLine("Скорость вентиляции: " + par_10.Vent_speed);
             } while (f_menu_rooms == 1);
         }
     }
