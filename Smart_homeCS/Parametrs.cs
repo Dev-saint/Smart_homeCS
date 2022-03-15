@@ -15,6 +15,52 @@ namespace Smart_homeCS
 		private int light; //Включение/выключение света
 		private int vent_speed; //Скорость вентиляции
 
+		private static Parametrs lastPar;
+		private Parametrs prev;
+		private Parametrs next;
+
+		// Новый список
+		public void NewList()
+		{
+			lastPar = null;
+		}
+
+		// Добавление элемента в конец списка
+		public void Add()
+		{
+			if (lastPar == null)
+				this.prev = null;
+			else
+			{
+				lastPar.next = this;
+				prev = lastPar;
+			}
+			lastPar = this;
+			this.next = null;
+		}
+
+		// Вывод на дисплей содержимого списка
+		public void reprint()
+		{
+			Parametrs uk;   // Вспомогательная ссылка
+			uk = lastPar;
+			if (uk == null)
+			{
+				Console.WriteLine("Список пуст!");
+				return;
+			}
+			else
+				Console.WriteLine("\nСодержимое списка:\n");
+
+			// Цикл печати в обратном порядке значений элементов списка:
+			while (uk != null)
+			{
+				Console.WriteLine(uk.air_temp + "\t");
+				uk = uk.prev;
+			}
+		}
+
+
 		public double Air_temp
         {
 			get => air_temp;

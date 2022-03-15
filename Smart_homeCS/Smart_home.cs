@@ -606,6 +606,33 @@ namespace Smart_homeCS
                 // Передача аргумента по out
                 mas_toil[1].TestOut5(out ArgOut);
                 Console.WriteLine("Аргумент функции после использования по out: " + ArgOut);
+
+                Console.Write("\n\n15) Продемонстрировать разумное использование оператора this\n");
+                Console.Write("==================================================================\n");
+                Console.Write("На примере класса Параметры, двусвязанный список\n\n");
+
+                Parametrs[] param = new Parametrs[4];
+                for (j = 0; j < 4; j++)
+                {
+                    param[j] = new Parametrs();
+                }
+
+                param[0].Set_air_temp(1);
+                param[1].Set_air_temp(2);
+                param[2].Set_air_temp(3);
+                param[3].Set_air_temp(4);
+
+                param[0].NewList();
+
+                // Вызов статической компанентной функции:
+                param[3].reprint();
+
+                // Включение созданных компанентов в двусвязанный список:
+                param[0].Add(); param[1].Add(); param[2].Add(); param[3].Add();
+
+                // Печать в обратном порядке значений элементов списка:
+                param[3].reprint();
+
             } while (f_menu_rooms == 1);
         }
     }
