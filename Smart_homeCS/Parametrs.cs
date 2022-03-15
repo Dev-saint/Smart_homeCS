@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Smart_homeCS
 {
-    public class Parametrs
+    public struct Parametrs
     {
 		private double air_temp; //Температура воздуха
 		private double air_hum; //Влажность воздуха
@@ -52,7 +52,7 @@ namespace Smart_homeCS
 			set => vent_speed = value;
 		}
 
-		public Parametrs()
+		/*public Parametrs()
 		{
 			air_temp = 0;
 			air_hum = 0;
@@ -60,7 +60,7 @@ namespace Smart_homeCS
 			brightness = 0;
 			light = 0;
 			vent_speed = 0;
-		}
+		}*/
 
 		//Функции получения данных из полей
 		public double Get_air_temp()
@@ -133,6 +133,17 @@ namespace Smart_homeCS
 			this.brightness = bright;
 			this.light = l;
 			this.vent_speed = speed;
+		}
+
+		//Вывод параметров на экран
+		public void Display()
+		{
+			Console.WriteLine("\nТемература воздуха: " + air_temp + " °С");
+			Console.WriteLine("Влажность воздуха: " + air_hum + " %");
+			Console.WriteLine("Концентрация CO2: " + conc_co2 + " %");
+			Console.WriteLine("Яркость света: " + brightness + " %");
+			Console.WriteLine("Флажок света: " + light);
+			Console.WriteLine("Скорость вентиляции: " + vent_speed + " %");
 		}
 	}
 }

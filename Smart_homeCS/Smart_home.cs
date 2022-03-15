@@ -589,6 +589,48 @@ namespace Smart_homeCS
                     mas_toil[j].Set_parametrs_toil(20 - j*2, 45 + j, 5*j, 100/(j+2), 1, 49/(j+1));
                     mas_toil[j].DisplayToil();
                 }
+
+                Console.Write("\n\n12) В отдельной ветке проекта заменить класс (class) \nна структуру (struct). Продемонстрировать различие \nмежду присваиванием объектов класса и структуры\n");
+                Console.Write("==================================================================\n");
+                Console.Write("На примере класса Кухня и структуры Параметры\n");
+
+                Kitchen kitch_1 = new Kitchen();
+                Parametrs par_12 = new Parametrs();
+
+                par_12.Set_parametrs(10, 10, 10, 10, 1, 10);
+                kitch.Set_parametrs_kitch(20, 20, 20, 20, 0, 20, 1);
+                kitch_1.Set_parametrs_kitch(10, 10, 10, 10, 1, 10, 0);
+                Console.WriteLine("Элемент структуры до копирования:");
+                par_12.Display();
+                Console.Write("\n");
+                Console.WriteLine("Элемент класса до копирования:");
+                kitch.DisplayKitch();
+                Console.Write("\n");
+                Console.WriteLine("Элемент структуры копируется на:");
+                par_10.Display();
+                Console.Write("\n");
+                Console.WriteLine("Элемент класса копируется на:");
+                kitch_1.DisplayKitch();
+                Console.Write("\n");
+                par_12 = par_10;
+                kitch = kitch_1;
+                Console.WriteLine("Элемент структуры после копирования:");
+                par_12.Display();
+                Console.Write("\n");
+                Console.WriteLine("Элемент класса после копирования:");
+                kitch.DisplayKitch();
+                Console.WriteLine("\n\nЕсли изменить те объекты, на которые менялись объект класса и структуры:");
+                par_10.Set_parametrs(77, 77, 77, 77, 0, 77);
+                kitch_1.Set_parametrs_kitch(77, 77, 77, 77, 0, 77, 1);
+                par_10.Display();
+                kitch_1.DisplayKitch();
+                Console.Write("\n");
+                Console.WriteLine("То новые объекты будут таковыми:");
+                par_12.Display();
+                kitch.DisplayKitch();
+                Console.WriteLine("Объект класса изменился, потому что копируется ссылка \n" +
+                    "на объект, а объект структуры не изменился, т.к. \n" +
+                    "копируются значения полей.");
             } while (f_menu_rooms == 1);
         }
     }

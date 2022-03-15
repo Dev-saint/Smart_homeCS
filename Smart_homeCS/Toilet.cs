@@ -81,23 +81,23 @@ namespace Smart_homeCS
         //Задание полей класса туалет
         public void Set_parametrs_toil(double temp, double hum, double co2, int bright, int l, int speed)
         {
-            this.param_toil.Set_air_temp(temp);
-            this.param_toil.Set_air_hum(hum);
-            this.param_toil.Set_conc_co2(co2);
-            this.param_toil.Set_brightness(bright);
-            this.param_toil.Set_light(l);
-            this.param_toil.Set_vent_speed(speed);
+            param_toil.Set_air_temp(temp);
+            param_toil.Set_air_hum(hum);
+            param_toil.Set_conc_co2(co2);
+            param_toil.Set_brightness(bright);
+            param_toil.Set_light(l);
+            param_toil.Set_vent_speed(speed);
         }
 
         //Вывод параметров туалета на экран
         public void DisplayToil()
         {
-            Console.WriteLine("\nТемература воздуха в туалете: " + this.Get_air_temp_toil() + " °С");
-            Console.WriteLine("Влажность воздуха в туалете: " + this.Get_air_hum_toil() + " %");
-            Console.WriteLine("Концентрация CO2 в туалете: " + this.Get_conc_co2_toil() + " %");
-            Console.WriteLine("Яркость света в туалете: " + this.Get_brightness_toil() + " %");
-            Console.WriteLine("Флажок света в туалете: " + this.Get_light_toil());
-            Console.WriteLine("Скорость вентиляции в туалете: " + this.Get_vent_speed_toil() + " %");
+            Console.WriteLine("\nТемература воздуха в туалете: " + Get_air_temp_toil() + " °С");
+            Console.WriteLine("Влажность воздуха в туалете: " + Get_air_hum_toil() + " %");
+            Console.WriteLine("Концентрация CO2 в туалете: " + Get_conc_co2_toil() + " %");
+            Console.WriteLine("Яркость света в туалете: " + Get_brightness_toil() + " %");
+            Console.WriteLine("Флажок света в туалете: " + Get_light_toil());
+            Console.WriteLine("Скорость вентиляции в туалете: " + Get_vent_speed_toil() + " %");
         }
 
         public void menu_toil() // Функция вызова меню параметров для туалета
