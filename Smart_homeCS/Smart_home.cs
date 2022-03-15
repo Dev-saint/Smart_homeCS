@@ -572,6 +572,23 @@ namespace Smart_homeCS
                 Console.WriteLine("Яркость: " + par_10.Brightness);
                 Console.WriteLine("Флаг света: " + par_10.Light);
                 Console.WriteLine("Скорость вентиляции: " + par_10.Vent_speed);
+
+                Console.Write("\n11) Cоздать массив объектов и продемонстрировать работу с ним\n");
+                Console.Write("==================================================================\n");
+                Console.Write("На примере класса Туалет\n");
+
+                Toilet[] mas_toil = new Toilet[3];
+                int j;
+                for (j = 0; j < 3; j++)
+                {
+                    mas_toil[j] = new Toilet();
+                }
+
+                for (j = 0; j < 3; j++)
+                {
+                    mas_toil[j].Set_parametrs_toil(20 - j*2, 45 + j, 5*j, 100/(j+2), 1, 49/(j+1));
+                    mas_toil[j].DisplayToil();
+                }
             } while (f_menu_rooms == 1);
         }
     }
