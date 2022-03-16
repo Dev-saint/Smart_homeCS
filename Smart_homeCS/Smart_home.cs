@@ -775,6 +775,14 @@ namespace Smart_homeCS
                 wine3.DisplayWine();
                 Console.WriteLine("\n\n");
 
+                Toilet[] toiletArr = new Toilet[3];
+                for (j = 0; j < 3; j++)
+                    toiletArr[j] = new Toilet(20 + j);
+                Console.WriteLine("Инициализировать небольшой массив конструктором с одним параметром:");
+                for (j = 0; j < 3; j++)
+                    toiletArr[j].DisplayToil();
+                Console.WriteLine("\n\n");
+
             } while (f_menu_rooms == 1);
         }
     }
