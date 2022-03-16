@@ -10,6 +10,52 @@ namespace Smart_homeCS
     {
         private Parametrs param_toil = new Parametrs(); //Параметры туалета
 
+        private static Toilet lastToil;
+        private Toilet prev;
+        private Toilet next;
+
+        // Новый список
+        public void NewList()
+        {
+            lastToil = null;
+        }
+
+        // Добавление элемента в конец списка
+        public void Add()
+        {
+            if (lastToil == null)
+                this.prev = null;
+            else
+            {
+                lastToil.next = this;
+                prev = lastToil;
+            }
+            lastToil = this;
+            this.next = null;
+        }
+
+        // Вывод на дисплей содержимого списка
+        public void reprint()
+        {
+            Toilet uk;   // Вспомогательная ссылка
+            uk = lastToil;
+            if (uk == null)
+            {
+                Console.WriteLine("Список пуст!");
+                return;
+            }
+            else
+                Console.WriteLine("\nСодержимое списка:\n");
+
+            // Цикл печати в обратном порядке значений элементов списка:
+            while (uk != null)
+            {
+                uk.param_toil.Display();
+                Console.WriteLine("\t");
+                uk = uk.prev;
+            }
+        }
+
         //Конструктор
         public Toilet()
         {

@@ -60,7 +60,6 @@ namespace Smart_homeCS
 			}
 		}
 
-
 		public double Air_temp
         {
 			get => air_temp;

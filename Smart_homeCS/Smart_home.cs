@@ -666,6 +666,35 @@ namespace Smart_homeCS
                     Troitskiy = Troitskiy + Prog;
                     Console.WriteLine(Troitskiy + "\n");
                 }
+
+                Console.WriteLine("\n\nЛабораторная работа 8:");
+                Console.WriteLine("\n========================================");
+                Console.WriteLine("Модифицировать ваши проекты на С++, C# и Java путем добавления в один из классов\n" +
+                    "как минимум одного статического поля и одного статического метода.");
+                Console.WriteLine("========================================\n");
+                Console.WriteLine("(Использовались статистический член класса \'Toilet\' \'lastToil\' и\n" +
+                    "статистические методы класса \'NewList\' и \'reprint\')\n");
+
+                mas_toil[0].Set_parametrs_toil(1, 1, 1, 1, 1, 1);
+                mas_toil[1].Set_parametrs_toil(2, 2, 2, 2, 0, 2);
+                mas_toil[2].Set_parametrs_toil(3, 3, 3, 3, 1, 3);
+
+                Console.WriteLine("Вызов статической компанентной функции: \'Новый список\'\n");
+                mas_toil[0].NewList();
+
+                Console.WriteLine("Вызов статической компанентной функции: \'Напечатать список\'\n");
+                // Вызов статической компанентной функции:
+                mas_toil[2].reprint();
+
+                Console.WriteLine("Добавление элементов в список.\n");
+                // Включение созданных компанентов в двусвязанный список:
+                mas_toil[0].Add(); mas_toil[1].Add(); mas_toil[2].Add();
+
+                Console.WriteLine("Вызов статической компанентной функции: \'Новый список\'\n");
+                Console.WriteLine("========================================");
+                // Печать в обратном порядке значений элементов списка:
+                mas_toil[2].reprint();
+                Console.WriteLine("\n========================================\n");
             } while (f_menu_rooms == 1);
         }
     }
