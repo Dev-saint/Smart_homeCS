@@ -798,6 +798,40 @@ namespace Smart_homeCS
 
                 Console.WriteLine("Введенная температура: " + param_try.Get_air_temp());
 
+                Toilet[] toilArr1 = new Toilet[3]; Toilet[,] toilArr2 = new Toilet[2, 2];
+
+                toilArr1[0] = new Toilet();
+                toilArr1[1] = new Toilet();
+                toilArr1[2] = new Toilet();
+
+                for (j = 0; j < 3; j++)
+                {
+                    toilArr1[j].Set_parametrs_toil(20 + j, 10 - j, 10 + j, 10 * j, 0, 80 / (j + 1));
+                }
+
+                for (int i = 0; i < 2; i++)
+                    for (j = 0; j < 2; j++)
+                        toilArr2[i, j] = new Toilet();
+
+                for (int i = 0; i < 2; i++)
+                    for (j = 0; j < 2; j++)
+                        toilArr2[i, j].Set_parametrs_toil(20 + j, 10 - j, 10 + j, 10 * j, 0, 80 / (j + 1));
+                //=================================
+
+                // Вывод
+                //=================================
+                Console.WriteLine("\nОдномерный массив размером [3]");
+                for (int i = 0; i < 3; i++)
+                    toilArr1[i].DisplayToil();
+
+                Console.WriteLine();
+
+                Console.WriteLine("Двумерный массив размером [2][2]");
+                for (int i = 0; i < 2; i++)
+                    for (j = 0; j < 2; j++)
+                        toilArr2[i, j].DisplayToil();
+                //=================================
+
 
             } while (f_menu_rooms == 1);
         }
