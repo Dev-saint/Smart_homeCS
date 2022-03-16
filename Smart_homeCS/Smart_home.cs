@@ -783,6 +783,22 @@ namespace Smart_homeCS
                     toiletArr[j].DisplayToil();
                 Console.WriteLine("\n\n");
 
+                Parametrs param_try = new Parametrs();
+                double temp = 0;
+
+                Console.WriteLine("Лабораторная 10\n");
+
+                while (param_try.Get_air_temp() == 0)
+                {
+                    Console.Write("\nВведите температуру: ");
+                    tmp = Console.ReadLine();
+                    temp = Convert.ToDouble(tmp);
+                    param_try.Set_air_temp(temp);
+                }
+
+                Console.WriteLine("Введенная температура: " + param_try.Get_air_temp());
+
+
             } while (f_menu_rooms == 1);
         }
     }

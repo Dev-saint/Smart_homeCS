@@ -97,6 +97,27 @@ namespace Smart_homeCS
 			set => vent_speed = value;
 		}
 
+		// Проверка числа на подходяее для температуры
+		public bool IsRightTemp(double temp)
+		{
+			bool res = true;
+			try                                                    // ищем исключения внутри этого блока и отправляем их в соответствующий обработчик catch
+			{
+				if (temp < -20 || temp > 40)                          // Если пользователь ввел неверное число, то выбрасывается исключение
+					throw new Exception("Incorrect value.");       // выбрасывается исключение типа const char*
+				return res;
+			}
+			catch (Exception ex)           // обработчик исключений типа const char*
+			{
+				Console.WriteLine("Error: " + ex.Message + '\n');
+				res = false;
+				return res;
+			}
+
+			//return res;
+		}
+
+
 		//Конструктор
 		public Parametrs()
 		{
@@ -111,7 +132,8 @@ namespace Smart_homeCS
 		//Конструктор с одним параметром
 		public Parametrs(double temp)
 		{
-			air_temp = temp;
+			if (IsRightTemp(temp))
+				air_temp = temp;
 			air_hum = 0;
 			conc_co2 = 0;
 			brightness = 0;
@@ -122,7 +144,8 @@ namespace Smart_homeCS
 		//Конструктор с параметрами
 		public Parametrs(double temp, double hum, double co2, int bright, int l, int speed)
 		{
-			air_temp = temp;
+			if (IsRightTemp(temp))
+				air_temp = temp;
 			air_hum = hum;
 			conc_co2 = co2;
 			brightness = bright;
@@ -164,7 +187,8 @@ namespace Smart_homeCS
 		//Функции задания полей
 		public void Set_air_temp(double temp)
 		{
-			this.air_temp = temp;
+			if (IsRightTemp(temp))
+				air_temp = temp;
 		}
 
 		public void Set_air_hum(double hum)
@@ -195,7 +219,8 @@ namespace Smart_homeCS
 		//Задание полей класса параметры
 		public void Set_parametrs(double temp, double hum, double co2, int bright, int l, int speed)
 		{
-			this.air_temp = temp;
+			if (IsRightTemp(temp))
+				air_temp = temp;
 			this.air_hum = hum;
 			this.conc_co2 = co2;
 			this.brightness = bright;
