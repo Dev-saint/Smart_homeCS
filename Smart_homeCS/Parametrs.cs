@@ -108,15 +108,26 @@ namespace Smart_homeCS
 			vent_speed = 0;
 		}
 
-		//Конструктор с параметрами
-		public Parametrs(double temp, double hum, double co2, int bright, int l, int vent_speed)
+		//Конструктор с одним параметром
+		public Parametrs(double temp)
 		{
-			this.air_temp = temp;
-			this.air_hum = hum;
-			this.conc_co2 = co2;
-			this.brightness = bright;
-			this.light = l;
-			this.vent_speed = vent_speed;
+			air_temp = temp;
+			air_hum = 0;
+			conc_co2 = 0;
+			brightness = 0;
+			light = 0;
+			vent_speed = 0;
+		}
+
+		//Конструктор с параметрами
+		public Parametrs(double temp, double hum, double co2, int bright, int l, int speed)
+		{
+			air_temp = temp;
+			air_hum = hum;
+			conc_co2 = co2;
+			brightness = bright;
+			light = l;
+			vent_speed = speed;
 		}
 
 		//Функции получения данных из полей

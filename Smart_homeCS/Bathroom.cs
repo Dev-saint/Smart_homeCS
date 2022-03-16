@@ -19,6 +19,20 @@ namespace Smart_homeCS
             this.flag_water = 0;
         }
 
+        //Конструктор с одним параметром
+        public Bathroom(double temp)
+        {
+            this.param_bath.Set_parametrs(temp, 0, 0, 0, 0, 0);
+            this.flag_water = 0;
+        }
+
+        //Конструктор с параметрами
+        public Bathroom(double temp, double hum, double co2, int bright, int l, int speed, int water)
+        {
+            this.param_bath.Set_parametrs(temp, hum, co2, bright, l, speed);
+            this.flag_water = water;
+        }
+
         //Функции получения данных из полей
         public double Get_air_temp_bath()
         {
@@ -52,7 +66,7 @@ namespace Smart_homeCS
 
         public int Get_flag_water()
         {
-            return this.Get_flag_water();
+            return this.flag_water;
         }
 
         //Функции задания полей
@@ -112,6 +126,7 @@ namespace Smart_homeCS
             Console.WriteLine("Яркость света в ванной: " + this.Get_brightness_bath() + " %");
             Console.WriteLine("Флажок света в ванной: " + this.Get_light_bath());
             Console.WriteLine("Скорость вентиляции в ванной: " + this.Get_vent_speed_bath() + " %");
+            Console.WriteLine("Флаг набора воды в ванной: " + this.Get_flag_water());
         }
 
         public void water_bath()   //Функция набора воды в ванную

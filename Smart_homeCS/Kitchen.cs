@@ -19,6 +19,20 @@ namespace Smart_homeCS
             this.coffee = 0;
         }
 
+        //Конструктор с одним параметром
+        public Kitchen(double temp)
+        {
+            this.param_kitch.Set_parametrs(temp, 0, 0, 0, 0, 0);
+            this.coffee = 0;
+        }
+
+        //Конструктор с параметрами
+        public Kitchen(double temp, double hum, double co2, int bright, int l, int speed, int cof)
+        {
+            this.param_kitch.Set_parametrs(temp, hum, co2, bright, l, speed);
+            this.coffee = cof;
+        }
+
         //Функции получения данных из полей
         public double Get_air_temp_kitch()
         {
@@ -112,6 +126,7 @@ namespace Smart_homeCS
             Console.WriteLine("Яркость света на кухне: " + this.Get_brightness_kitch() + " %");
             Console.WriteLine("Флажок света на кухне: " + this.Get_light_kitch());
             Console.WriteLine("Скорость вентиляции на кухне: " + this.Get_vent_speed_kitch() + " %");
+            Console.WriteLine("Флажок кофе на кухне: " + this.Get_coffee());
         }
 
         public void coffee_machine() //Функция приготовления кофе

@@ -695,6 +695,86 @@ namespace Smart_homeCS
                 // Печать в обратном порядке значений элементов списка:
                 mas_toil[2].reprint();
                 Console.WriteLine("\n========================================\n");
+
+                Parametrs param1 = new Parametrs();
+                Parametrs param2 = new Parametrs(20);
+                Parametrs param3 = new Parametrs(20, 50, 10, 50, 0, 30);
+
+                Console.WriteLine("Лабораторная 9\n");
+                Console.WriteLine("Конструкторы класса Параметры:");
+                Console.WriteLine("\n1) Конструктор без параметров:");
+                param1.Display();
+                Console.WriteLine("\n2) Конструктор с 1-им параметром:");
+                param2.Display();
+                Console.WriteLine("\n3) Конструктор с параметрами:");
+                param3.Display();
+                Console.WriteLine("\n\n");
+
+                Toilet toil1 = new Toilet();
+                Toilet toil2 = new Toilet(20);
+                Toilet toil3 = new Toilet(20, 50, 10, 50, 0, 30);
+
+                Console.WriteLine("Конструкторы класса Туалет:");
+                Console.WriteLine("\n1) Конструктор без параметров:");
+                toil1.DisplayToil();
+                Console.WriteLine("\n2) Конструктор с 1-им параметром:");
+                toil2.DisplayToil();
+                Console.WriteLine("\n3) Конструктор с параметрами:");
+                toil3.DisplayToil();
+                Console.WriteLine("\n\n");
+
+                Kitchen kitch1 = new Kitchen();
+                Kitchen kitch2 = new Kitchen(20);
+                Kitchen kitch3 = new Kitchen(20, 50, 10, 50, 0, 30, 0);
+
+                Console.WriteLine("Конструкторы класса Кухня:");
+                Console.WriteLine("\n1) Конструктор без параметров:");
+                kitch1.DisplayKitch();
+                Console.WriteLine("\n2) Конструктор с 1-им параметром:");
+                kitch2.DisplayKitch();
+                Console.WriteLine("\n3) Конструктор с параметрами:");
+                kitch3.DisplayKitch();
+                Console.WriteLine("\n\n");
+
+                Bedroom bed1 = new Bedroom();
+                Bedroom bed2 = new Bedroom(20);
+                Bedroom bed3 = new Bedroom(20, 50, 10, 50, 0, 30);
+
+                Console.WriteLine("Конструкторы класса Спальня:");
+                Console.WriteLine("\n1) Конструктор без параметров:");
+                bed1.DisplayBed();
+                Console.WriteLine("\n2) Конструктор с 1-им параметром:");
+                bed2.DisplayBed();
+                Console.WriteLine("\n3) Конструктор с параметрами:");
+                bed3.DisplayBed();
+                Console.WriteLine("\n\n");
+
+                Bathroom bath1 = new Bathroom();
+                Bathroom bath2 = new Bathroom(20);
+                Bathroom bath3 = new Bathroom(20, 50, 10, 50, 0, 30, 0);
+
+                Console.WriteLine("Конструкторы класса Ванная:");
+                Console.WriteLine("\n1) Конструктор без параметров:");
+                bath1.DisplayBath();
+                Console.WriteLine("\n2) Конструктор с 1-им параметром:");
+                bath2.DisplayBath();
+                Console.WriteLine("\n3) Конструктор с параметрами:");
+                bath3.DisplayBath();
+                Console.WriteLine("\n\n");
+
+                Wine_vault wine1 = new Wine_vault();
+                Wine_vault wine2 = new Wine_vault(20);
+                Wine_vault wine3 = new Wine_vault(20, 50, 10, 50, 0, 30);
+
+                Console.WriteLine("Конструкторы класса Винный погреб:");
+                Console.WriteLine("\n1) Конструктор без параметров:");
+                wine1.DisplayWine();
+                Console.WriteLine("\n2) Конструктор с 1-им параметром:");
+                wine2.DisplayWine();
+                Console.WriteLine("\n3) Конструктор с параметрами:");
+                wine3.DisplayWine();
+                Console.WriteLine("\n\n");
+
             } while (f_menu_rooms == 1);
         }
     }

@@ -16,6 +16,18 @@ namespace Smart_homeCS
             this.param_wine.Set_parametrs(0, 0, 0, 0, 0, 0);
         }
 
+        //Конструктор с одним параметром
+        public Wine_vault(double temp)
+        {
+            this.param_wine.Set_parametrs(temp, 0, 0, 0, 0, 0);
+        }
+
+        //Конструктор с параметрами
+        public Wine_vault(double temp, double hum, double co2, int bright, int l, int speed)
+        {
+            this.param_wine.Set_parametrs(temp, hum, co2, bright, l, speed);
+        }
+
         //Функции получения данных из полей
         public double Get_air_temp_wine()
         {
