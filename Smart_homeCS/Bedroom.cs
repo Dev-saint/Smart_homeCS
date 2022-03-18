@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Smart_homeCS
 {
-    class Bedroom : Parametrs
+    /*class Bedroom : Parametrs
     {
-        private Parametrs param_bed = new Parametrs();
+        //private Parametrs param_bed = new Parametrs();
 
         //Конструктор
         public Bedroom()
@@ -122,5 +122,5 @@ namespace Smart_homeCS
                 + "6. Скорость вентиляции\n"
                 + "Выбранный пункт: ");
         }
-    }
+    }*/
 }

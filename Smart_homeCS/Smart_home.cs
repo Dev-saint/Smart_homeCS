@@ -14,10 +14,10 @@ namespace Smart_homeCS
             int f_menu_rooms = 0, room, par, f_menu_par = 0, bright, speed, light, coffee, water;
             string tmp;
             Toilet toil = new Toilet();
-            Kitchen kitch = new Kitchen();
-            Bedroom bed = new Bedroom();
-            Bathroom bath = new Bathroom();
-            Wine_vault wine = new Wine_vault();
+            //Kitchen kitch = new Kitchen();
+            //Bedroom bed = new Bedroom();
+            //Bathroom bath = new Bathroom();
+            //Wine_vault wine = new Wine_vault();
             Console.WriteLine("Система умного дома");
             /*do
             {
@@ -835,8 +835,85 @@ namespace Smart_homeCS
 
             } while (f_menu_rooms == 1);*/
 
-            Parametrs param1;
-            
+            /*Toilet toil1 = new Toilet(1, 1, 1, 1, 1, 1);
+            Parametrs param1 = new Parametrs(2, 2, 2, 2, 0, 2);
+
+            Console.WriteLine("3) Продемонстрировать перегрузку метода базового");
+            Console.WriteLine("  класса в производном классе(с вызовом метода базового");
+            Console.WriteLine("  класса и без такого вызова)\n");
+
+            param1.Display();
+            toil1.DisplayToil();
+            Console.WriteLine();
+            param1.Temp_check();
+            toil1.Temp_check();
+            Console.WriteLine(param1.Temp_up());
+            Console.WriteLine(toil1.Temp_up());*/
+
+            /*Toilet toil1 = new Toilet(1, 1, 1, 1, 1, 1);
+            Console.WriteLine("6) Заменить методы Display используя операции << для C++\n");
+            Console.WriteLine("Параметры туалета:\n" + toil1.ToString());*/
+
+            /*Toilet toil1 = new Toilet(1, 1, 1, 1, 1, 1);
+            Parametrs param1 = new Parametrs(2, 2, 2, 2, 0, 2);
+
+            Console.WriteLine("7) Придумать разумное использование виртуальных функций и создать их в вашем проекте.\n");
+            param1.Display();
+            toil1.DisplayToil();
+            Console.WriteLine();
+            param1.Temp_check();
+            toil1.Temp_check();
+            Parametrs Param = new Parametrs(3, 3, 3, 3, 0, 3);
+            Toilet Toil = new Toilet(4, 4, 4, 4, 1, 4);
+            Parametrs pParam = Toil;
+            Toilet pToil = Toil;
+            Parametrs pParam2 = Param;
+            Console.WriteLine("========================================================");
+            Console.WriteLine();
+            Console.WriteLine("Объект класса Учитель");
+            Toil.DisplayToil();
+            Console.WriteLine();
+            Console.WriteLine("Указатель класса Персона на класс Учитель");
+            pParam.Display();
+            Console.WriteLine();
+            Console.WriteLine("Указатель класса Персона на класс Учитель");
+            pParam2.Display();
+            Console.WriteLine();
+            Console.WriteLine("Вызов виртуальной функции через не виртуальную базового класса");
+            Console.WriteLine("от объекта класса Учитель");
+            Toil.Temp_check();
+            Console.WriteLine();
+            Console.WriteLine("Вызов виртуальной функции через не виртуальную базового класса");
+            Console.WriteLine("от объекта класса Персона");
+            Param.Temp_check();
+            Console.WriteLine();
+            Console.WriteLine("от указателя Персона на объект класса Учитель");
+            Console.WriteLine(pParam.Temp_up());
+            Console.WriteLine();
+            Console.WriteLine("от указателя Персона на объект класса Персона");
+            Console.WriteLine(pParam2.Temp_up());
+            Console.WriteLine();
+            Console.WriteLine("от указателя Учитель на объект класса Учитель");
+            Console.WriteLine(pToil.Temp_up());*/
+
+            /*Toilet toil1 = new Toilet();
+
+            Console.WriteLine("8) В проектах на C++,  Java, C# придумать разумное использовани\nабстрактного класса и создать его. Продемонстрировать его использование;\n");
+            toil1.Inp();
+            Console.WriteLine();
+            toil1.DisplayToil();*/
+
+            Toilet toil1 = new Toilet();
+
+            Console.WriteLine("9) В  проектах Java, C# придумать разумное использование интерфейсов.\nПродемонстрировать их использование\n");
+
+            toil1.Inp();
+            Console.WriteLine();
+
+            toil1.Display();
+            Console.WriteLine();
+
+            Console.WriteLine(toil1.Temp_up());
         }
     }
 }

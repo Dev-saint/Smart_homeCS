@@ -7,10 +7,10 @@ using System.Threading;
 
 namespace Smart_homeCS
 {
-    class Kitchen : Parametrs
+    /*class Kitchen : Parametrs
     {
         private int coffee; //Приготовление кофе после сна
-        private Parametrs param_kitch = new Parametrs();
+        //private Parametrs param_kitch = new Parametrs();
 
         //Конструктор
         public Kitchen()
@@ -150,5 +150,5 @@ namespace Smart_homeCS
                 + "7. Приготовление кофе\n"
                 + "Выбранный пункт: ");
         }
-    }
+    }*/
 }

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Smart_homeCS
 {
-    class Wine_vault : Parametrs
+    /*class Wine_vault : Parametrs
     {
-        private Parametrs param_wine = new Parametrs();
+        //private Parametrs param_wine = new Parametrs();
 
         //Конструктор
         public Wine_vault()
@@ -122,5 +122,5 @@ namespace Smart_homeCS
                 + "6. Скорость вентиляции\n"
                 + "Выбранный пункт: ");
         }
-    }
+    }*/
 }

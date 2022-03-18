@@ -7,7 +7,7 @@ using System.Threading;
 
 namespace Smart_homeCS
 {
-    class Bathroom : Parametrs
+    /*class Bathroom : Parametrs
     {
         private int flag_water; //Флаг набора воды
         private Parametrs param_bath = new Parametrs();
@@ -150,5 +150,5 @@ namespace Smart_homeCS
                 + "7. Набор воды в ванную\n"
                 + "Выбранный пункт: ");
         }
-    }
+    }*/
 }
