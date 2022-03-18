@@ -7,7 +7,7 @@ using System.Threading;
 
 namespace Smart_homeCS
 {
-    class Bathroom
+    class Bathroom : Parametrs
     {
         private int flag_water; //Флаг набора воды
         private Parametrs param_bath = new Parametrs();

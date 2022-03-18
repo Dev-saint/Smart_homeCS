@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Smart_homeCS
 {
-    class Bedroom
+    class Bedroom : Parametrs
     {
         private Parametrs param_bed = new Parametrs();
 

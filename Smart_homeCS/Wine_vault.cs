@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Smart_homeCS
 {
-    class Wine_vault
+    class Wine_vault : Parametrs
     {
         private Parametrs param_wine = new Parametrs();
 

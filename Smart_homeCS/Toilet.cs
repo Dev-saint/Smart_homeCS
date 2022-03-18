@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Smart_homeCS
 {
-    public class Toilet
+    public class Toilet : Parametrs
     {
         private Parametrs param_toil = new Parametrs(); //Параметры туалета
 
@@ -57,21 +57,21 @@ namespace Smart_homeCS
         }
 
         //Конструктор
-        public Toilet()
+        public Toilet() : base(0, 0, 0, 0, 0, 0)
         {
-            this.param_toil.Set_parametrs(0, 0, 0, 0, 0, 0);
+            //this.param_toil.Set_parametrs(0, 0, 0, 0, 0, 0);
         }
 
         //Конструктор с одним параметром
-        public Toilet(double temp)
+        public Toilet(double temp) : base(temp, 0, 0, 0, 0, 0)
         {
-            this.param_toil.Set_parametrs(temp, 0, 0, 0, 0, 0);
+            //this.param_toil.Set_parametrs(temp, 0, 0, 0, 0, 0);
         }
 
         //Конструктор с параметрами
-        public Toilet(double temp, double hum, double co2, int bright, int l, int speed)
+        public Toilet(double temp, double hum, double co2, int bright, int l, int speed) : base(temp, hum, co2, bright, l, speed)
         {
-            this.param_toil.Set_parametrs(temp, hum, co2, bright, l, speed);
+            //this.param_toil.Set_parametrs(temp, hum, co2, bright, l, speed);
         }
 
         //Функции получения данных из полей

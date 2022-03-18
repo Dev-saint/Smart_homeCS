@@ -15,11 +15,11 @@ namespace Smart_homeCS
 		private int light; //Включение/выключение света
 		private int vent_speed; //Скорость вентиляции
 
-		private static Parametrs lastPar;
+		/*private static Parametrs lastPar;
 		private Parametrs prev;
-		private Parametrs next;
+		private Parametrs next;*/
 
-		// Новый список
+		/*// Новый список
 		public void NewList()
 		{
 			lastPar = null;
@@ -115,8 +115,7 @@ namespace Smart_homeCS
 			}
 
 			//return res;
-		}
-
+		}*/
 
 		//Конструктор
 		public Parametrs()
@@ -132,8 +131,8 @@ namespace Smart_homeCS
 		//Конструктор с одним параметром
 		public Parametrs(double temp)
 		{
-			if (IsRightTemp(temp))
-				air_temp = temp;
+			//if (IsRightTemp(temp))
+			air_temp = temp;
 			air_hum = 0;
 			conc_co2 = 0;
 			brightness = 0;
@@ -144,8 +143,8 @@ namespace Smart_homeCS
 		//Конструктор с параметрами
 		public Parametrs(double temp, double hum, double co2, int bright, int l, int speed)
 		{
-			if (IsRightTemp(temp))
-				air_temp = temp;
+			//if (IsRightTemp(temp))
+			air_temp = temp;
 			air_hum = hum;
 			conc_co2 = co2;
 			brightness = bright;
@@ -187,8 +186,8 @@ namespace Smart_homeCS
 		//Функции задания полей
 		public void Set_air_temp(double temp)
 		{
-			if (IsRightTemp(temp))
-				air_temp = temp;
+			//if (IsRightTemp(temp))
+			air_temp = temp;
 		}
 
 		public void Set_air_hum(double hum)
@@ -219,8 +218,8 @@ namespace Smart_homeCS
 		//Задание полей класса параметры
 		public void Set_parametrs(double temp, double hum, double co2, int bright, int l, int speed)
 		{
-			if (IsRightTemp(temp))
-				air_temp = temp;
+			//if (IsRightTemp(temp))
+			air_temp = temp;
 			this.air_hum = hum;
 			this.conc_co2 = co2;
 			this.brightness = bright;
@@ -238,11 +237,11 @@ namespace Smart_homeCS
 			Console.WriteLine("Скорость вентиляции: " + vent_speed + " %");
 		}
 
-		public static Parametrs operator +(Parametrs operand1, Parametrs operand2)
+		/*public static Parametrs operator +(Parametrs operand1, Parametrs operand2)
 			=> new Parametrs(operand1.air_temp + operand2.air_temp, 0, 0, 0, 0, 0);
 
 		public static Parametrs operator ++(Parametrs operand1)
-			=> new Parametrs(operand1.air_temp + 1, 0, 0, 0, 0, 0);
+			=> new Parametrs(operand1.air_temp + 1, 0, 0, 0, 0, 0);*/
 
 	}
 }

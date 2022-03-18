@@ -7,7 +7,7 @@ using System.Threading;
 
 namespace Smart_homeCS
 {
-    class Kitchen
+    class Kitchen : Parametrs
     {
         private int coffee; //Приготовление кофе после сна
         private Parametrs param_kitch = new Parametrs();

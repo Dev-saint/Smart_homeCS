@@ -19,7 +19,7 @@ namespace Smart_homeCS
             Bathroom bath = new Bathroom();
             Wine_vault wine = new Wine_vault();
             Console.WriteLine("Система умного дома");
-            do
+            /*do
             {
                 Console.Write("Выберите комнату:\n"
                     + "1. Туалет\n"
@@ -833,7 +833,10 @@ namespace Smart_homeCS
                 //=================================
 
 
-            } while (f_menu_rooms == 1);
+            } while (f_menu_rooms == 1);*/
+
+            Parametrs param1;
+            
         }
     }
 }
